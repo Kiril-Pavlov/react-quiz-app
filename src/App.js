@@ -1,11 +1,34 @@
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 
+//components
+import Home from "./components/Home"
+import Quiz from "./components/Quiz"
+import Result from "./components/Result"
+
+// react routes
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home></Home>
+    },
+    {
+      path: "/quiz",
+      element: <Quiz/>
+    },
+    {
+      path: "/result",
+      element: <Result/>
+    },
+  ]
+)
 
 function App() {
   return (
-    <div className="font-bold text-3xl">
-        Working...
-    </div>
-  );
+    <>
+      <RouterProvider router={router} />
+    </>
+  )
 }
 
 export default App;
