@@ -1,24 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import data from "../database/data";
 
 const Questions = () => {
+  const [selected, setSelected] = useState(undefined);
 
-    const [selected, setSelected] = useState(undefined)
+  const question = data[0];
 
-    const handleRadioSelection = () =>{
-        setSelected(true)
-        console.log("radio buton changed")
-    }
+  useEffect(() => {
+    console.log(question);
+  }, []);
+
+  const handleRadioSelection = () => {
+    setSelected(true);
+    console.log("radio buton changed");
+  };
 
   return (
     <div>
-      <h2>Question Placeholder 1</h2>
+      <h2>{question.question}</h2>
 
-      <ul>
-        <li>
+      <ul key={question.id}>
+        {question.options.map((option, index) => (
+          <li key={index}>
+            <input
+              type="radio"
+              value={selected}
+              name="options"
+              id={`q${index}-option`}
+              onChange={handleRadioSelection}
+            />
+            <label htmlFor={`q${index}-option`}>{option}</label>
+          </li>
+        ))}
+        {/* <li>
           <input type="radio" value={selected} name="options" id="q1-option" onChange={handleRadioSelection} />
             <label htmlFor="q1-option">option</label>
-        </li>
-        
+        </li> */}
       </ul>
     </div>
   );
