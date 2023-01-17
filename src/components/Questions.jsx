@@ -16,12 +16,12 @@ const Questions = () => {
   };
 
   return (
-    <div>
-      <h2>{question.question}</h2>
+    <div className="flex flex-col gap-5">
+      <h2 className="font-bold text-xl">{question.question}</h2>
 
-      <ul key={question.id}>
+      <ul key={question.id} className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {question.options.map((option, index) => (
-          <li key={index}>
+          <li key={index} className="bg-sky-300 px-4 py-2 rounded-full flex gap-2">
             <input
               type="radio"
               value={selected}
