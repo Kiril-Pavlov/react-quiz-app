@@ -18,18 +18,7 @@ const Questions = () => {
           <input type="radio" value={selected} name="options" id="q1-option" onChange={handleRadioSelection} />
             <label htmlFor="q1-option">option</label>
         </li>
-        <li>
-          <input type="radio" value={selected} name="options" id="q1-option" onChange={handleRadioSelection} />
-            <label htmlFor="q1-option">option</label>
-        </li>
-        <li>
-          <input type="radio" value={selected} name="options" id="q1-option" onChange={handleRadioSelection} />
-            <label htmlFor="q1-option">option</label>
-        </li>
-        <li>
-          <input type="radio" value={selected} name="options" id="q1-option" onChange={handleRadioSelection} />
-            <label htmlFor="q1-option">option</label>
-        </li>
+        
       </ul>
     </div>
   );
