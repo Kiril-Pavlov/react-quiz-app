@@ -1,5 +1,7 @@
 import React from "react";
 
+import Questions from "./Questions";
+
 const Quiz = () => {
 
   const handlePreviousQuestion = ()=>{
@@ -14,6 +16,8 @@ const Quiz = () => {
     <div className="flex items-center justify-center w-full h-screen">
       <div className="flex w-11/12 sm:w-10/12 md:w-3/4 lg:w-1/2  flex-col gap-20">
         <h1 className="font-bold text-3xl text-center">Questions</h1>
+
+        <Questions />
 
         <div className="flex flex-row items-center justify-between">
           <button 
