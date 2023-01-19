@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import ResultTable from './ResultTable'
+
 const Result = () => {
 
   const handleRestart = () => {
@@ -39,6 +41,9 @@ const Result = () => {
       <button>
         <Link to={'/'} onClick={handleRestart}  className='bg-sky-500 px-10 py-3 rounded-full text-white font-semibold text-xl'>Restart</Link>
       </button>
+      <div>
+        <ResultTable/>
+      </div>
     </div>
   )
 }
