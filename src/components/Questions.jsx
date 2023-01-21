@@ -7,12 +7,12 @@ const Questions = () => {
   const question = data[0];
 
   useEffect(() => {
-    console.log(question);
+    // console.log(question);
   }, []);
 
   const handleRadioSelection = () => {
-    setSelected(true);
-    console.log("radio buton changed");
+    // setSelected(true);
+    // console.log("radio buton changed");
   };
 
   return (
