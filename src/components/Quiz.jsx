@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Questions from "./Questions";
 
+//import Redux Store
+import { useSelector } from "react-redux";
+
 const Quiz = () => {
+
+  const { questions } = useSelector(state=>state)
+
+  useEffect(()=>{
+    console.log(questions.queue)
+  },[])
 
   const handlePreviousQuestion = ()=>{
     console.log("previous button clicked")
